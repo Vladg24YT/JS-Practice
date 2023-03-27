@@ -1,0 +1,8 @@
+main {
+    background-color: white;
+}
+
+ul->li {
+    background-color: gray;
+    list-style-type: none;
+}
