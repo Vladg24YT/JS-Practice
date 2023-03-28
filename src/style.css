@@ -1,8 +1,47 @@
-main {
-    background-color: white;
+:root {
+    --accent-color: gray;
+    --accent-color-dark: darkgray;
+    --accent-color-light: lightgray;
+    --secondary-color: whitesmoke;
+    --secondary-color-light: white;
 }
 
-ul->li {
-    background-color: gray;
+main {
+    background-color: var(--secondary-color-light);
+}
+
+header {
+    text-align: center;
+}
+
+.item {
+    background-color: var(--accent-color-light);
+    border-bottom: 4px solid white;
+    font-size: 16pt;
     list-style-type: none;
+    padding: 1em;
+    position: relative;
+}
+
+.close {
+    background-color: var(--accent-color);
+    border-radius: 0.45em;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: larger;
+    padding: 0.5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.close:hover {
+    background-color: red;
+    color: var(--secondary-color-light);
+}
+
+.checked {
+    background-color: var(--accent-color-dark);
+    color: var(--secondary-color-light);
+    text-decoration: line-through;
 }
