@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
@@ -9,10 +9,19 @@
         <input type="text" id="newNote">
         <input type="button" onclick="addItem()" title="Adds a new item" value="Add">
         <ul id="list">
-            <li id="item1">DummyItem1</li>
+            <li class="item">DummyItem1</li>
         </ul>
         <script>
-            
+            let listTag = document.getElementById('list');
+            let itemArray = [];
+            //conversion of existing elements into an array
+            for (let i = 0; i < listTag.getElementsByClassName('item'); i++) {
+                itemArray[i] = document.getElementsByClassName('item')[i];
+                itemArray[i].appendChild(document.createElement("button").addEventListener('click', () => {
+                    let currentItem = this.parent;
+                    currentItem.style.display = "none";
+                }));
+            }
         </script>
     </main>
 </body>
