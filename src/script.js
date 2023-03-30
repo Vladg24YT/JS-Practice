@@ -25,5 +25,13 @@ let updateRemoveButtonFor = function (currentElement) {
 }
 
 let updateCheckboxFor = function (currentElement) {
-
+  let clickableBox = document.createElement("span");
+  clickableBox.className = "checkbox";
+  currentElement.appendChild(clickableBox);
+  currentElement.onclick = function(e) {
+    console.log(e.target.tagName);
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle('checked');
+    }
+  }
 }

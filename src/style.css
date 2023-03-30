@@ -45,3 +45,11 @@ header {
     color: var(--secondary-color-light);
     text-decoration: line-through;
 }
+
+ul->li.checked:before{
+    content: '2713';
+}
+
+ul->li.checkbox {
+    cursor: pointer;
+}
