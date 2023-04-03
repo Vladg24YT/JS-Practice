@@ -71,3 +71,15 @@ ul {
 ul->li.checkbox {
     cursor: pointer;
 }
+
+.alert {
+    background-color: crimson;
+    border-style: double;
+    border-width: 2px;
+    color: azure;
+    font-size: 20px;
+    height: fit-content;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+}

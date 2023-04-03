@@ -5,7 +5,7 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body id="body">
     <header>
         <h1>TO-DO List</h1>
         <input type="text" id="newNote"  placeholder="New item...">
@@ -15,13 +15,5 @@
         <ul id="list">
             <li class="item">Dummy Item 1</li>
         </ul>
-        <script>
-            //update elements for all pre-existing list items
-            let itemArray = document.getElementsByTagName("li");
-            for (let i = 0; i < itemArray.length; i++) {
-                updateRemoveButtonFor(itemArray[i]);
-                updateCheckboxFor(itemArray[i]);
-            }
-        </script>
     </main>
 </body>
