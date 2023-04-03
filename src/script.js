@@ -5,13 +5,13 @@ for (let i = 0; i < itemArray.length; i++) {
   updateCheckboxFor(itemArray[i]);
 }
 
-const checkInput = () => {
+function checkInput() {
   const userInput = document.getElementById("newNote");
   if (!userInput.value) { showError("Nothing to add"); }
   return userInput.value != null;
 }
 
-const addItem = () => {
+function addItem() {
   if (!checkInput()) { return; }
   const newItem = document.createElement("li");
   newItem.className = "item";
@@ -23,7 +23,7 @@ const addItem = () => {
   updateCheckboxFor(newItem);
 };
 
-const updateRemoveButtonFor = (currentElement) => {
+function updateRemoveButtonFor(currentElement) {
   const clickableSpan = document.createElement("span");
 
   clickableSpan.className = "close";
@@ -35,7 +35,7 @@ const updateRemoveButtonFor = (currentElement) => {
   currentElement.appendChild(clickableSpan);
 }
 
-const updateCheckboxFor = (currentElement) => {
+function updateCheckboxFor(currentElement) {
   const clickableBox = document.createElement("span");
   clickableBox.className = "checkbox";
 
@@ -47,7 +47,7 @@ const updateCheckboxFor = (currentElement) => {
   }
 }
 
-const showError = (message) => {
+function showError(message) {
   window.alert(message);
   /*const alertFrame = document.createElement("div");
   alertFrame.className = "alert";
