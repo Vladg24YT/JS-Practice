@@ -36,10 +36,6 @@ function updateRemoveButtonFor(currentElement) {
 }
 
 function updateCheckboxFor(currentElement) {
-  const clickableBox = document.createElement("span");
-  clickableBox.className = "checkbox";
-
-  currentElement.appendChild(clickableBox);
   currentElement.onclick = (e) => {
     if (e.target.tagName === "LI") {
       e.target.classList.toggle('checked');
@@ -48,9 +44,14 @@ function updateCheckboxFor(currentElement) {
 }
 
 function showError(message) {
-  window.alert(message);
-  /*const alertFrame = document.createElement("div");
+  const alertBackground = document.createElement("div");
+  alertBackground.className = "alert_bg";
+  alertBackground.onclick = () => {
+    this.remove();
+  }
+  const alertFrame = document.createElement("div");
   alertFrame.className = "alert";
   alertFrame.textContent = message;
-  document.getElementById("body").appendChild(alertFrame);*/
+  alertBackground.appendChild(alertFrame);
+  document.getElementById("body").appendChild(alertBackground);
 }

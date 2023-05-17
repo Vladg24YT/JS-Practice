@@ -65,7 +65,7 @@ ul {
 }
 
 .checked:before {
-    content: '\2713 ';
+    content: '\2713';
 }
 
 ul->li.checkbox {
@@ -78,8 +78,20 @@ ul->li.checkbox {
     border-width: 2px;
     color: azure;
     font-size: 20px;
-    height: fit-content;
+    height: 100px;
     position: absolute;
     text-align: center;
     width: 250px;
+}
+
+.alert_bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 4em;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
